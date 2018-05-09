@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, TextInput, Text } from "react-native";
 
-export const InputField = ({ label, onChangeText, value, placeholder }) => {
+export const InputField = ({ label, onChangeText, value, placeholder, secureTextEntry }) => {
   const { inputStyle, labelStyle, containerStyle } = styles;
   return (
     <View style={containerStyle}>
@@ -12,6 +12,7 @@ export const InputField = ({ label, onChangeText, value, placeholder }) => {
         value={value}
         onChangeText={onChangeText}
         style={inputStyle}
+        secureTextEntry={secureTextEntry}
       />
     </View>
   )
